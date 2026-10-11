@@ -1,0 +1,19 @@
+[package]
+name = "diffcraft-report"
+description = "DiffCraft reports: unified diffs, HTML side-by-side text reports, folder reports (HTML/CSV)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+diffcraft-core.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+proptest.workspace = true
+
+[lints]
+workspace = true

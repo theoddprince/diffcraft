@@ -1,0 +1,31 @@
+[package]
+name = "diffcraft-core"
+description = "DiffCraft engine: text/binary/image/folder comparison, three-way merge and folder sync (no UI)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+serde.workspace = true
+rayon.workspace = true
+walkdir.workspace = true
+globset.workspace = true
+crc32fast.workspace = true
+sha2.workspace = true
+encoding_rs.workspace = true
+chardetng.workspace = true
+regex.workspace = true
+image.workspace = true
+trash.workspace = true
+log.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+proptest.workspace = true
+
+[lints]
+workspace = true

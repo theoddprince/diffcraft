@@ -1,0 +1,25 @@
+[package]
+name = "diffcraft-ui"
+description = "DiffCraft desktop UI (egui/eframe): text, merge, folder, sync, hex and picture views"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+diffcraft-core.workspace = true
+diffcraft-session.workspace = true
+diffcraft-report.workspace = true
+eframe.workspace = true
+egui.workspace = true
+rfd.workspace = true
+image.workspace = true
+log.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

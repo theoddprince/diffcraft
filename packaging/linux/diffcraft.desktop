@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=DiffCraft
+GenericName=Diff and Merge Tool
+Comment=Compare and merge files, folders, binaries and pictures
+Exec=diffcraft %F
+Icon=diffcraft
+Terminal=false
+Categories=Development;Utility;
+Keywords=diff;compare;merge;folder;sync;hex;
+MimeType=inode/directory;text/plain;
+StartupWMClass=diffcraft

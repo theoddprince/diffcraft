@@ -1,0 +1,53 @@
+[package]
+name = "diffcraft"
+description = "DiffCraft: compare and merge files, folders, binaries and pictures (open source)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+authors.workspace = true
+default-run = "diffcraft"
+
+[lib]
+name = "diffcraft_app"
+path = "src/lib.rs"
+
+[[bin]]
+name = "diffcraft"
+path = "src/main.rs"
+
+# Console twin of the GUI binary: on Windows the GUI binary has no console, so scripts and
+# terminals use `diffcraft-cli` for the headless subcommands. Elsewhere both behave the same.
+[[bin]]
+name = "diffcraft-cli"
+path = "src/bin/diffcraft-cli.rs"
+
+[dependencies]
+diffcraft-core.workspace = true
+diffcraft-session.workspace = true
+diffcraft-report.workspace = true
+diffcraft-ui.workspace = true
+clap.workspace = true
+env_logger.workspace = true
+log.workspace = true
+
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.deb]
+name = "diffcraft"
+section = "devel"
+assets = [
+    ["target/release/diffcraft", "usr/bin/", "755"],
+    ["target/release/diffcraft-cli", "usr/bin/", "755"],
+    ["../../packaging/linux/diffcraft.desktop", "usr/share/applications/", "644"],
+    ["../../packaging/linux/diffcraft.png", "usr/share/icons/hicolor/256x256/apps/", "644"],
+]
+
