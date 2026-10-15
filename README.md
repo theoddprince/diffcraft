@@ -1,7 +1,3 @@
-<p align="center">
-  <img alt="DiffCraft icon" src="assets/brand/diffcraft-icon-256.png" width="120">
-</p>
-
 <h1 align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/brand/diffcraft-wordmark-on-dark.png">
